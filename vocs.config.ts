@@ -22,6 +22,10 @@ export default defineConfig({
       link: '/calculating-roi',
     },
     {
+      text: 'Case Study',
+      link: '/case-study',
+    },
+    {
       text: 'Technical How-Tos',
       collapsed: false,
       items: [
