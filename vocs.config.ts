@@ -10,10 +10,6 @@ export default defineConfig({
       link: '/',
     },
     {
-      text: 'Our Team',
-      link: '/our-team',
-    },
-    {
       text: 'Frequently Asked Questions',
       link: '/faq',
     },
@@ -26,14 +22,14 @@ export default defineConfig({
       link: '/case-study',
     },
     {
+      text: 'Our Team',
+      link: '/our-team',
+    },
+    {
       text: 'Technical How-Tos',
       collapsed: false,
       items: [
-        {
-          text: 'Building an Extension',
-          link: '/technical-how-tos/building-an-extension',
-        },
-        {
+       {
           text: 'Verifying Contracts',
           link: '/technical-how-tos/verifying-contracts',
         },

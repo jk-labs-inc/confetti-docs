@@ -9,37 +9,8 @@ A contest is just a way for people to vote on their favorite entries. During the
 Before the voting period opens, contestants can submit their entries—or the contest creator may only allowlist themselves to submit these entries. a rewards pool; if they vote on the winners, they can claim their share of the rewards.
 Popular contest use cases include demo days, integration decisions, Product-Hunt style leaderboards, community awards,  best meme/tweet/essay competitions, feature requests, polls, and even reality TV show-style votes.etc. Any kind of community decision is, effectively, a contest.
 
-### Do I need a crypto experience to play in a contest on Confetti?
-No, Para allows anyone to join Confetti contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
-
-How do I send funds?
-1. tap user profile (upper right)
-2. tap “send funds”
-3. send funds from your wallet wherever you like
-
-There’s no need to rely on external apps to manage your funds. There’s no need to be dependent on embedded ones to custody them. Your funds are yours.
-
-### Which chains can I add cash to?
-See the full list of supported chains [here](https://help.coinbase.com/en/wallet/getting-started/what-types-of-crypto-does-wallet-support)
-
 ### How do I claim my funds when I vote on winning entries?
 Just go to "my rewards" tab and you'll see a button to claim rewards for each entry that won. Note that in the case of a tie, these go to the contest creator to distribute, and you should reach out to them.
-
-### Why is Confetti onchain?
-
-Onchain contests give you five benefits you couldn’t get offchain.
-
-1. Monetization. Voters can earn by voting on winners, creating fun stakes, disincentivizing botting, and, well, enabling them to make real money. In a traditional auction process, for example, the winning bidder would lose money; in a contest, they gain money, incentivizing them to participate.
-
-2. Attention. The financial incentives drive attention: for example, voters will want to learn about competing projects and teams in order to determine which they want to win, and they’ll be incentivized to get others to vote for these entries as well. Likewise, they will give their attention to the community throwing the contest.
-
-3. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. By participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
-
-4. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
-
-5. Executability. Anyone can build modules on top of Confetti so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
-
-6. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home.
 
 ### How many entries can be entered into an opinion market?
 
@@ -115,6 +86,10 @@ Vote-and-earn means that voters can earn from voting on winning entries. With pr
 
 Price curves increase the price per vote at every minute throughout the contest, incentivizing early, high-conviction votes. Early voters can claim a greater share of the votes for much cheaper, enabling them to benefit from significantly lower prices, higher potential returns, and rewards from all subsequent voters who help subsidize their earnings. This approach aligns incentives, maximizes potential returns, and enhances contest engagement.
 
+### What multiple should I use for the price curve?
+
+We generally recommend keeping the 10x default, which helps incentivize players to vote early with conviction on what they actually believe. If the price curve is too low (say 4 or 5x), then people can still make good money by the end of the contest, incentivizing them to just wait and vote on what everyone else votes on. This is bad for measuring belief, and it's also bad for the contest, since players ideally start voting early to subsidize the rewards pool (which draws more people to vote in turn).
+
 ### Who pays for the rewards?
 
 90% of all voting fees go into the rewards pool, creating a liquidity flywheel: as voters vote, rewards go up, incentivizing more voters to vote in turn. In addition, you can seed the rewards pool to help kickstart the contest (we generally recommend seeding with $100-200 that helps incentivize initial voters to play).
@@ -170,11 +145,11 @@ Successful contests tend to have three traits in common.
 
 3. Marketing. Successful contests usually launch at least a week before voting and then market the contest both through their own channels and the contestants’. Creators will often set up groupchats for contestants to coordinate around timing, and they’ll often tag and feature them in the build-up to the actual voting day—a bit like a lead-up to an infamous boxing match.
 
-### Why does jk labs take a 10% cut of charges?
+### Why is there a 10% cut of charges?
 
-A 10% cut is what funds the protocol and helps ensure contests are more fair and engaging. Here’s why:
+jk labs (the creators of Confetti) takes 5% of all volume and contest creators have an option to take 5% as well.
 
-- Prevents whales from farming rewards: The 10% cut disincentivizes whales from swooping in with a large pot of money to claim 1st place and earn from everyone else’s vote, since they effectively need to pay a 10% charge on their own votes. For example, it is extremely risky for a whale to drop $1,000,000 on an entry at the start: either they discourage other voters from participating, thus incurring a $100,000 fee, or they create a honey pot for other voters to band together and try to claim the $1,000,000 in the rewards pool.
+A 10% cut prevents the ultra-wealthy from farming rewards. The 10% cut disincentivizes whales from swooping in with a large pot of money to claim 1st place and earn from everyone else’s vote, since they effectively need to pay a 10% charge on their own votes. For example, it is extremely risky for a whale to drop $1,000,000 on an entry at the start: either they discourage other voters from participating, thus incurring a $100,000 fee, or they create a honey pot for other voters to band together and try to claim the $1,000,000 in the rewards pool.
 
 ### How does this change voter strategy?
 
@@ -221,50 +196,6 @@ All affected ranks will have their rewards returned to the contest creator. That
 
 We recommend including your own policy for ties in your contest description to share with players.
 
-**What happens if I need to distribute rewards to multiple people?**
-If you need to distribute rewards to multiple people, go to the extensions tab of your contest and tap the “see analytics” button to access a dashboard of everyone who entered or voted. (Please note dashboards are only supported on major chains, so if you don’t see the link, you’ll need to pull these addresses manually.) You can then use a tool like disperse.app to distribute the rewards to multiple addresses. We do not own and are not liable for any dispersal apps.
-
-## Extensions
-
-### What are extensions?
-
-Extensions are 3rd party integrations built on top of Confetti’s protocol that extend the features and functionality of contests.
-Anyone can build an extension permissionlessly, and we’ll feature select ones on our site that link to the 3rd party’s integration. We want users to discover the services of anyone who has built on top of us.
-
-### What should I do if I want to build an extension?
-
-First of all, dm us on [twitter](https://twitter.com/confetti_win)! We’d love to hear what you’re up to and see if we can support.
-
-Confetti is fully onchain, so we have no API: the blockchain itself is effectively our API. You can query and parse and listen to any data you need directly from the chain, as each contest is its own smart contract.
-
-Generally the strongest extensions will include:
-
-1. A standalone page for a given contest—or for users to input the url to a contest. This lets us link directly to a page that’s specifically relevant to Confetti.
-2. Ample context on the page about how the extension works and what each field means (or, alternately, a link to docs explaining these).
-3. Support for as many EVM chains as possible.
-
-Not all extensions should look the same, however. We want Confetti to be able to feed data and metadata into everything from analytics and points platforms to onchain execution services, so our top goal is expanding use cases for partners.
-
-### What are examples of extensions?
-
-Current extensions include:
-
-- Viewing contest analytics on Dune
-- Assigning roles and powers to winners of contests with Hats Protocol
-- Rewarding winners NFTs with Coinvise
-
-Potential future extensions could include:
-
-- Minting winning entries as NFTs
-- Deploying capital with parameters set by the winning entry
-- Buying back tokens with the fees accrued by the contest
-- Reenterting fees from contest into rewards
-- Slashing node operators based on the vote of a contest
-- Adding winners to a multisig
-- Revoking membership in a community
-- Curating data sets to train an AI agent
-- Approving an AI agent to take actions onchain
-
 ## Troubleshooting
 
 ### I can’t enter the contest — what’s happening?
@@ -281,33 +212,33 @@ What this means is that even if you lose a contest, you still win—because you�
 
 But this is just one example. In fact, because Confetti is fully onchain, you can use any data point from contests to determine your own system of rewarding reputation.
 
-To get analytics on your contest, tap the “extensions” tab and “see analytics” button. your contest dashboard shows you everyone who entered and voted. just pull their addresses and you can give them
-- airdrops
-- community access
-- credentials
-- reimbursements
+### Do I need a crypto experience to play in a contest on Confetti?
+No, Para allows anyone to join Confetti contests without needing crypto. When you choose the “login with Para” option to sign up, a wallet is created for you automatically. From there you can add funds using Apple Pay, a debit card, or your Coinbase account.
 
-## Dashboards
+How do I send funds?
+1. tap user profile (upper right)
+2. tap “send funds”
+3. send funds from your wallet wherever you like
 
-### How do I access my contest dashboard?
+There’s no need to rely on external apps to manage your funds. There’s no need to be dependent on embedded ones to custody them. Your funds are yours.
 
-1. Navigate to your contest page
-2. Click the "Extensions" tab
-3. Select "See Analytics"
-4. Click "Run" to load the latest data
+### Which chains can I add cash to?
+See the full list of supported chains [here](https://help.coinbase.com/en/wallet/getting-started/what-types-of-crypto-does-wallet-support)
 
-Notes:
-- Be patient - initial data loading can take several minutes
-- Click "Run" anytime you want to refresh the data
-- Not all contests have dashboards available - if the chain that a contest is on is not supported by [Dune](https://dune.com/) then it will not have a dashboard
+### Why is Confetti onchain?
 
-### What data can I see?
+Onchain contests give you five benefits you couldn’t get offchain.
 
-The dashboard shows:
-- Total revenue
-- Number of entries and entrants
-- Number of votes and unique voters
-- Entry IDs and voter addresses
-- Proposer addresses
-- Detailed voting patterns
+1. Monetization. Voters can earn by voting on winners, creating fun stakes, disincentivizing botting, and, well, enabling them to make real money. In a traditional auction process, for example, the winning bidder would lose money; in a contest, they gain money, incentivizing them to participate.
+
+2. Attention. The financial incentives drive attention: for example, voters will want to learn about competing projects and teams in order to determine which they want to win, and they’ll be incentivized to get others to vote for these entries as well. Likewise, they will give their attention to the community throwing the contest.
+
+3. Reputation. Every vote in an onchain contest is an attestation that an entry was valuable. By participating in your contest, players earn powerful onchain reputation they can leverage for years to come. But reputation is also important for you as a contest creator: now you can easily track your most valuable users in case you ever want to offer them airdrops, access, or power within citizens councils in your own community.
+
+4. Insight. Onchain data gives you powerful insight into your community. At a high level, you can leverage onchain data to see which members are most active, which entrants and voters are most valuable, which ideas command the most passion, and which commonalities exist between players: you could even build a whole social graph of shared user tastes. But at a deeper level, you can also get full insights from customer segmentation about power users’ onchain activity across other protocols and projects.
+
+5. Executability. Anyone can build modules on top of Confetti so that the result of a vote triggers an action on their service. Hats has already built a module to give winners role-based NFTs, but other modules could include minting winning entries or executing a winning piece of code. By building onchain, we can be the decision layer of the internet.
+
+6. Gamification. Give credentials that let winners move up the ranks of future contests. Incentivize your community to complete onchain actions on your service to get more voting power. Livestream a contest with limited contestants and let thousands of voters vote from home.
+
 
